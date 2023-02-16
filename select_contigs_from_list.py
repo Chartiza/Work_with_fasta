@@ -1,8 +1,8 @@
-with open('C:/path/Bal_1_mams.txt') as f:
+with open('Needed_contigs_list.txt') as f:
     contigs = f.read().splitlines()
 
-with open('12_contigs.fasta','w') as f:
-  for l in open('canu_subreads.unassembled.fasta'):
+with open('Output_contigs.fasta','w') as f:
+  for l in open('Input_contigs.fasta'):
     if '>' in l:
       data=l.rstrip().split(' ')
       contig_name = data[0][1:]
